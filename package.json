@@ -1,7 +1,7 @@
 {
   "name": "nn-chat",
   "version": "1.0.0",
-  "description": "NNチャット",
+  "description": "ぽこ森のチャット",
   "main": "index.js",
   "scripts": {
     "test": "node --test"

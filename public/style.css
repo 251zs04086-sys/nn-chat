@@ -2,10 +2,116 @@ body.container {
   padding-top: 70px;
   padding-bottom: 200px;
 }
+
 :root {
   scroll-behavior: auto;
 }
+
 p.card-text {
   white-space: pre-wrap;
   word-break: break-all;
+}
+
+body {
+  background-color: #f3faef;
+  background-image: linear-gradient(180deg, #e8f6ef 0%, #f7fbf4 65%, #e2f3d8 100%);
+  background-attachment: fixed;
+  color: #4a403a;
+}
+
+/* 余白に森を表示 */
+body::before,
+body::after {
+  white-space: pre;
+  position: fixed;
+  top: 70px;
+  height: 100vh;
+  width: calc(50vw - 490px);
+  font-size: 2.3rem;
+  line-height: 2.1;
+  letter-spacing: 0.3em;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* 左側の森 */
+body::before {
+  content:
+    "🌲  🌳  🍀  🌲  🌳  🌸\A\A"
+    "  🌳  🍀  🌲  🌷  🌳  \A\A"
+    "🍀  🌲  🌳  🍀  🌲  🌳\A\A"
+    "  🌲  🌷  🌳  🌲  🍀  \A\A"
+    "🌳  🍀  🌲  🌳  🌸  🌲\A\A"
+    "  🍀  🌲  🌳  🌷  🌲  ";
+  left: 0;
+  text-align: right;
+}
+
+/* 右側の森 */
+body::after {
+  content:
+    "🌳  🌲  🌸  🌳  🌲  🍀\A\A"
+    "  🌲  🌷  🌳  🍀  🌲  \A\A"
+    "🌳  🍀  🌲  🌳  🍀  🌲\A\A"
+    "  🍀  🌲  🌷  🌳  🌲  \A\A"
+    "🌲  🌳  🌸  🌲  🌳  🍀\A\A"
+    "  🌲  🌷  🌳  🌲  🍀  ";
+  right: 0;
+  text-align: left;
+}
+
+.cute-navbar {
+  background-color: #ff9ebb;
+}
+
+.card {
+  border-radius: 20px;
+  border-width: 2px;
+}
+
+body[data-bs-theme="light"] .my-post {
+  border-color: #ff9ebb;
+  background-color: #fff0f5;
+}
+
+.cute-btn {
+  background-color: #ff9ebb;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.cute-btn:hover {
+  background-color: #ff85a1;
+  color: #ffffff;
+}
+
+.stamp-btn {
+  background-color: #ffffff;
+  border: 1.5px solid #ff9ebb;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  transition: transform 0.1s;
+}
+
+.stamp-btn:hover {
+  background-color: #fff0f5;
+  border-color: #ff85a1;
+  transform: scale(1.1);
+}
+
+.stamp-post {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+body[data-bs-theme="dark"] {
+  background-color: #16221a;
+  background-image: linear-gradient(180deg, #111b15 0%, #19281e 65%, #121e16 100%);
+  color: #e4ede6;
+}
+
+body[data-bs-theme="dark"] .stamp-btn {
+  background-color: #2b3035;
 }

@@ -35,3 +35,12 @@ const tooltipTriggerElements = document.querySelectorAll('[data-bs-toggle="toolt
 tooltipTriggerElements.forEach((tooltipTriggerElement) => {
   new bootstrap.Tooltip(tooltipTriggerElement);
 });
+
+// スタンプボタンの有効化
+const stampButtons = document.querySelectorAll('.stamp-btn');
+stampButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    textareaElement.value = button.dataset.stamp;
+    formElement.submit();
+  });
+});
